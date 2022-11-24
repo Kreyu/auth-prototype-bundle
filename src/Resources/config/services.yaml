@@ -1,0 +1,18 @@
+services:
+  _defaults:
+    autowire: false
+    autoconfigure: false
+
+  Kreyu\Bundle\AuthPrototypeBundle\Controller\SecurityController:
+    public: true
+    tags:
+      - container.service_subscriber
+      - controller.service_arguments
+    calls:
+      - method: setContainer
+        arguments:
+          - '@Psr\Container\ContainerInterface'
+
+  Kreyu\Bundle\AuthPrototypeBundle\Security\LoginFormAuthenticator:
+    arguments:
+      - '@Symfony\Component\Routing\Generator\UrlGeneratorInterface'

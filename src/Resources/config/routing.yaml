@@ -1,0 +1,4 @@
+app_login:
+  path: /login
+  controller: Kreyu\Bundle\AuthPrototypeBundle\Controller\SecurityController::login
+  methods: GET|POST
