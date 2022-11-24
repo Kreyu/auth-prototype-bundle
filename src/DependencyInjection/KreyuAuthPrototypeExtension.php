@@ -27,7 +27,7 @@ class KreyuAuthPrototypeExtension extends Extension implements PrependExtensionI
                     'custom_authenticator' => LoginFormAuthenticator::class,
                     'provider' => 'users_in_memory',
                     'logout' => [
-                        'path' => 'app_logout',
+                        'path' => LoginFormAuthenticator::LOGOUT_ROUTE,
                     ],
                 ],
             ],

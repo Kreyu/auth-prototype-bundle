@@ -22,6 +22,7 @@ class LoginFormAuthenticator extends AbstractLoginFormAuthenticator
     use TargetPathTrait;
 
     public const LOGIN_ROUTE = 'kreyu_auth_prototype_login';
+    public const LOGOUT_ROUTE = 'kreyu_auth_prototype_logout';
 
     public function __construct(private readonly UrlGeneratorInterface $urlGenerator)
     {
