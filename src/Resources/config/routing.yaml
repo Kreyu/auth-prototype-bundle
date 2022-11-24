@@ -1,4 +1,7 @@
-app_login:
+kreyu_auth_prototype_login:
   path: /login
   controller: Kreyu\Bundle\AuthPrototypeBundle\Controller\SecurityController::login
   methods: GET|POST
+
+kreyu_auth_prototype_logout:
+  controller: Kreyu\Bundle\AuthPrototypeBundle\Controller\SecurityController::logout
