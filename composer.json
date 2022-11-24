@@ -5,5 +5,10 @@
         "symfony/framework-bundle": "^6.1",
         "symfony/security-bundle": "^6.1",
         "symfony/twig-bundle": "^6.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Kreyu\\Bundle\\AuthPrototypeBundle\\": "src"
+        }
     }
 }
