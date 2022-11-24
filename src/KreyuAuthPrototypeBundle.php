@@ -8,4 +8,5 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 class KreyuAuthPrototypeBundle extends Bundle
 {
+    // ...
 }

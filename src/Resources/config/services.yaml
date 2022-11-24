@@ -12,7 +12,3 @@ services:
       - method: setContainer
         arguments:
           - '@Psr\Container\ContainerInterface'
-
-  Kreyu\Bundle\AuthPrototypeBundle\Security\LoginFormAuthenticator:
-    arguments:
-      - '@Symfony\Component\Routing\Generator\UrlGeneratorInterface'

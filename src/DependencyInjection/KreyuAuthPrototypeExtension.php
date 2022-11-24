@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Kreyu\Bundle\AuthPrototypeBundle\DependencyInjection;
 
-use Kreyu\Bundle\AuthPrototypeBundle\Security\LoginFormAuthenticator;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Extension\Extension;
@@ -24,10 +23,13 @@ class KreyuAuthPrototypeExtension extends Extension implements PrependExtensionI
         $container->loadFromExtension('security', [
             'firewalls' => [
                 'main' => [
-                    'custom_authenticator' => LoginFormAuthenticator::class,
                     'provider' => 'users_in_memory',
+                    'form_login' => [
+                        'login_path' => 'kreyu_auth_prototype_login',
+                        'check_path' => 'kreyu_auth_prototype_login',
+                    ],
                     'logout' => [
-                        'path' => LoginFormAuthenticator::LOGOUT_ROUTE,
+                        'path' => 'kreyu_auth_prototype_logout',
                     ],
                 ],
             ],
